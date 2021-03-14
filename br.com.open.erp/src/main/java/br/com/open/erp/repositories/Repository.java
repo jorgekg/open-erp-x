@@ -11,5 +11,6 @@ public interface Repository<T> {
 	@Transactional(readOnly = true)
 	public T retrieve(Long id);
 	
+	@Transactional(readOnly = true)
 	public Page<T> list(FilterImpl filter);
 }
